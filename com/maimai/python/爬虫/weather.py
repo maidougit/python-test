@@ -2,8 +2,8 @@
 #!/usr/bin/env python
 # 解释器路径
 
-from HTMLParser import HTMLParser
-import sys, urllib2, string, re
+from html.parser import HTMLParser
+import sys, urllib.request, string, re
 
 
 # 导入使用方法模块
@@ -45,9 +45,7 @@ def getdata(self):
 # this url is a place where you want to know the weather forecast
 url = "http://www.weather.com.cn/html/weather/101210501.shtml"
 
-req = urllib2.Request(url)
-
-fd = urllib2.urlopen(req)
+fd = urllib.request.urlopen(url)
 
 tp = HtmlParser()
 
@@ -78,4 +76,5 @@ third[0] = third[0][:-6]
 third = third[:3]
 weather = ['    Weather:'] + first + ['|'] + second + ['|'] + third
 
-for i in weather: print i,
+for i in weather:
+    print (i),

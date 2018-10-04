@@ -1,6 +1,6 @@
 # coding:utf-8
 
-import re, urllib
+import re, urllib.request
 
 strTitle = ""
 strTxtTmp = ""
@@ -8,7 +8,7 @@ strTxtOK = ""
 
 f = open("163News.txt", "w+")
 
-m = re.findall(r"news\.163\.com/\d.+?<\/a>", urllib.urlopen("http://www.163.com").read(), re.M)
+m = re.findall(r"news\.163\.com/\d.+?<\/a>", urllib.request.urlopen("http://www.163.com").read(), re.M)
 
 # www.iplaypy.com
 
@@ -21,7 +21,7 @@ for i in m:
         UrlNews = ''
         UrlNews = "http://" + okUrl
 
-        print UrlNews
+        print (UrlNews)
 
 """
 查找分析链接里面的正文内容，但是由于 163 新闻的格式不是非常统一，所以只能说大部分可以。
@@ -29,7 +29,7 @@ for i in m:
 """
 n = re.findall(r"<P style=.TEXT-INDENT: 2em.>(.*?)<\/P>", urllib.urlopen(UrlNews).read(), re.M)
 for j in n:
-    if len(j) <> 0:
+    if len(j) != 0:
         j = j.replace("&nbsp", "\n")
         j = j.replace("<STRONG>", "\n_____")
         j = j.replace("</STRONG>", "_____\n")
@@ -41,7 +41,7 @@ strTxtOK = strTxtOK + "\n\n\n==============="
 i.split('"')[0] + i.split('"')[1] + "===============\n" + strTxtTmp
 
 strTxtTmp = ""  # 组合链接标题和正文内容
-print strTxtOK
+print (strTxtOK)
 
 f.write(strTitle + "\n\n\n" + strTxtOK)  # 全部分析完成后，写入文件
 f.close()  # 关闭文件

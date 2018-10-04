@@ -18,7 +18,7 @@ for i in range(4, 365, 2):
     r.setbit('u105',i,1)
 
 userList = r.keys('u*')
-print userList
+print (userList)
 
 Au = []
 Nau = []
@@ -30,10 +30,10 @@ for u in userList:
         Nau.append((u, loginCount))
 
 for l in Au:
-    print l[0] + ' is a Active user.' + str(l[1])
+    print (l[0] + ' is a Active user.' + str(l[1]))
 
-print "-------------------------"
+print ("-------------------------")
 
 for l in Nau:
-    print l[0] + 'is not a Active user.' + str(l[1])
+    print (l[0] + 'is not a Active user.' + str(l[1]))
 
