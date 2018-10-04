@@ -55,15 +55,16 @@ class Movie(db.Model):
     info = db.Column(db.Text)  # 简介
     logo = db.Column(db.String(255), unique=True)  # 封面
     star = db.Column(db.SmallInteger)  # 星级
-    platnum = db.Column(db.BigInteger)  # 播放量
+    playnum = db.Column(db.BigInteger)  # 播放量
     commentnum = db.Column(db.BigInteger)  # 评论量
     tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'))  # 所属标签
     area = db.Column(db.String(255))  # 上映地区
-    release = db.Column(db.DATE)  # 放映时间
+    release_time = db.Column(db.DATE)  # 放映时间
     length = db.Column(db.String(100))  # 播放时间
     addtime = db.Column(db.DATETIME, index=True, default=datetime.now)  # 时间
     comments = db.relationship("Comment", backref="movie")  # 评论外键关联关系
     moviecols = db.relationship("Moviecol", backref="movie")  # 收藏外键关联关系
+    tag = db.relationship("Tag", backref="movie")  # 标签外键关联关系
 
     def __repr__(self):
         return "<Movie %r>" % self.title
@@ -145,6 +146,11 @@ class Admin(db.Model):
 
     def __repr__(self):
         return "<Admin %r>" % self.name
+
+     # 定义密码验证函数
+    def check_pwd(self, pwd):
+        from werkzeug.security import check_password_hash  # 由于密码是加密的，所以要引入相应的加密函数
+        return check_password_hash(self.pwd, pwd)
 
 
 # 管理员登陆日志
