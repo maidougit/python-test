@@ -126,7 +126,6 @@ class Role(db.Model):
     name = db.Column(db.String(100), unique=True)  # 名称
     auths = db.Column(db.String(600))  # 角色列表
     addtime = db.Column(db.DATETIME, index=True, default=datetime.now)  # 时间
-    admins = db.relationship("Admin", backref="role")
 
     def __repr__(self):
         return "<Role %r>" % self.name
@@ -143,11 +142,12 @@ class Admin(db.Model):
     adminlogs = db.relationship("Adminlog", backref="admin")  # 管理员登陆日志外键关联关系
     oplogs = db.relationship("Oplog", backref="admin")  # 管理员操作日志外键关联关系
     addtime = db.Column(db.DATETIME, index=True, default=datetime.now)  # 时间
+    role = db.relationship("Role",backref="admin")
 
     def __repr__(self):
         return "<Admin %r>" % self.name
 
-     # 定义密码验证函数
+    # 定义密码验证函数
     def check_pwd(self, pwd):
         from werkzeug.security import check_password_hash  # 由于密码是加密的，所以要引入相应的加密函数
         return check_password_hash(self.pwd, pwd)
@@ -177,8 +177,9 @@ class Oplog(db.Model):
     def __repr__(self):
         return "<Oplog %r>" % self.id
 
+
 if __name__ == "__main__":
-    #db.create_all()
+    # db.create_all()
     """
       role = Role(
         name="超级管理员",
@@ -188,9 +189,10 @@ if __name__ == "__main__":
     db.session.commit()
     """
     from werkzeug.security import generate_password_hash
+
     admin = Admin(
-        name = "miacheng",
-        pwd = generate_password_hash("123321"),
+        name="miacheng",
+        pwd=generate_password_hash("123321"),
         is_super=0,
         role_id=1
     )

@@ -7,6 +7,7 @@ import os
 app = Flask(__name__)
 # 配置连接信息
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@127.0.0.1:3306/movie'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1qaz@WSX123@127.0.0.1:3306/movie'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY']='3191e92ae18e42bd9f8524e925d0d9fc'
 app.config['UP_DIR']=os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/uploads/")

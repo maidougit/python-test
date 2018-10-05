@@ -61,3 +61,4 @@ class RegisterForm(FlaskForm):
             "class": "btn btn-primary btn-block btn-flat"
         }
     )
+
