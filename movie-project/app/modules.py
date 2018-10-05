@@ -22,6 +22,11 @@ class User(db.Model):
     def __repr__(self):
         return "<User %r>" % self.name
 
+    # 定义密码验证函数
+    def check_pwd(self, pwd):
+        from werkzeug.security import check_password_hash  # 由于密码是加密的，所以要引入相应的加密函数
+        return check_password_hash(self.pwd, pwd)
+
 
 # 日志模型
 class UserLog(db.Model):
