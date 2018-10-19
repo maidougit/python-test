@@ -24,13 +24,13 @@
             {% for msg in get_flashed_messages(category_filter=["err"]) %}　　　
             <p style="color: red">{{msg}}</p>
             {%endfor%}
-            <form role="form" method="POST">
+            <form role="form" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <div class="form-group">
                         <label for="input_name"><span class="glyphicon glyphicon-user"></span>&nbsp;{{form.name.label}}</label>
                         {{form.name}}
                     </div>
-                    < {% for err in form.name.errors %}　　　　　　　　<!--错误信息-->
+                     {% for err in form.name.errors %}　　　　　　　　<!--错误信息-->
                     <div class="col-md-12">
                         <span style="color: red">{{ err }}</span>　　<!--显示错误信息-->
                     </div>
@@ -39,7 +39,7 @@
                         <label for="input_email"><span class="glyphicon glyphicon-envelope"></span>&nbsp;{{form.email.label}}</label>
                         {{form.email}}
                     </div>
-                    < {% for err in form.email.errors %}　　　　　　　　<!--错误信息-->
+                    {% for err in form.email.errors %}　　　　　　　　<!--错误信息-->
                     <div class="col-md-12">
                         <span style="color: red">{{ err }}</span>　　<!--显示错误信息-->
                     </div>
@@ -48,28 +48,31 @@
                         <label for="input_phone"><span class="glyphicon glyphicon-phone"></span>&nbsp;{{form.phone.label}}</label>
                         {{form.phone}}
                     </div>
-                    < {% for err in form.phone.errors %}　　　　　　　　<!--错误信息-->
+                    {% for err in form.phone.errors %}　　　　　　　　<!--错误信息-->
                     <div class="col-md-12">
                         <span style="color: red">{{ err }}</span>　　<!--显示错误信息-->
                     </div>
                     {% endfor %}
                     <div class="form-group">
-                        <label for="input_face"><span class="glyphicon glyphicon-picture"></span>&nbsp;头像</label>
-                        <img src="holder.js/100x100" class="img-responsive img-rounded">
-                        <a class="btn btn-primary" style="margin-top:6px;"><span
-                                class="glyphicon glyphicon-open"></span>&nbsp;上传头像</a>
+                        <label for="input_face"><span class="glyphicon glyphicon-picture"></span>&nbsp;{{form.face.label}}</label>
+                            {{form.face}}
+                        {% if user.face %}
+                        <img src="{{url_for('static',filename='uploads/user/' + user.face)}}" class="img-responsive img-rounded" style="width: 150px;height: 150px">
+                        {%else%}
+                          <img src="holder.js/100*100" class="img-responsive img-rounded">
+                        {%endif%}
                         <input id="input_face" class="form-control" name="face" type="hidden" autofocus>
                     </div>
-                    < {% for err in form.face.errors %}　　　　　　　　<!--错误信息-->
+                    {% for err in form.face.errors %}　　　　　　　　<!--错误信息-->
                     <div class="col-md-12">
                         <span style="color: red">{{ err }}</span>　　<!--显示错误信息-->
                     </div>
                     {% endfor %}
                     <div class="form-group">
-                        <label for="input_info"><span class="glyphicon glyphicon-edit"></span>&nbsp;简介</label>
-                        <textarea class="form-control" rows="10" id="input_info">十年窗下无人问，一举成名天下知</textarea>
+                        <label for="input_info"><span class="glyphicon glyphicon-edit"></span>&nbsp;{{form.info.label}}</label>
+                       {{form.info}}
                     </div>
-                    < {% for err in form.info.errors %}　　　　　　　　<!--错误信息-->
+                    {% for err in form.info.errors %}　　　　　　　　<!--错误信息-->
                     <div class="col-md-12">
                         <span style="color: red">{{ err }}</span>　　<!--显示错误信息-->
                     </div>

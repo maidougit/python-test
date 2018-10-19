@@ -95,16 +95,16 @@ def logout():
 
 
 #修改密码
-@admin.route("/pwd/")
+@admin.route("/pwd/",methods=['POST'])
 @admin_login_req
 def pwd():
     form = PwdForm()
     if form.validate_on_submit():
         data = form.data
-        admin = Admin.query.filter_by(name=session["admin"]).first()
+        user = User.query.filter_by(name=session["user"]).first()
         from werkzeug.security import generate_password_hash
         admin.pwd = generate_password_hash(data["new_pwd"])
-        db.session.add(admin)
+        db.session.add(user)
         db.session.commit()
         flash("修改密码成功！请重新登陆", "ok")
         redirect(url_for("admin.logout"))
@@ -498,7 +498,7 @@ def oplog_list(page=None):
     return render_template("admin/oplog_list.html", page_data=page_data)
 
 
-# 操作日志列表
+# 会员日志列表
 @admin.route("/userloginlog/list/<int:page>", methods=['GET'])
 @admin_login_req
 #@admin_auth
@@ -511,7 +511,7 @@ def userloginlog_list(page=None):
     return render_template("admin/userloginlog_list.html",page_data=page_data)
 
 
-# 操作日志列表
+# 管理员日志列表
 @admin.route("/adminloginlog/list/")
 @admin_login_req
 #@admin_auth

@@ -2,8 +2,8 @@
 from . import home
 from flask import render_template, url_for, redirect, flash, session, request, abort
 from flask import render_template, redirect, url_for
-from app.home.forms import RegisterForm, LoginForm,UserDetailForm
-from app.modules import User, UserLog
+from app.home.forms import RegisterForm, LoginForm,UserDetailForm,PwdForm
+from app.modules import User, UserLog,Preview,Tag
 from app import app, db
 from functools import wraps
 from werkzeug.utils import secure_filename
@@ -53,6 +53,8 @@ def logout():
     session.pop("user", None)
     session.pop("user_id", None)
     return redirect(url_for("home.login"))  # 注册
+
+
 @home.route("/register/", methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
@@ -112,14 +114,27 @@ def user():
         db.session.commit()
         flash("修改会员信息成功！", "ok")
         return redirect(url_for("home.user"))
-    return render_template("home/user.html",form=form)
+    return render_template("home/user.html",form=form,user=user)
 
 
 # 修改密码
-@home.route("/pwd/")
+@home.route("/pwd/", methods=['GET','POST'])
 @user_login_req
 def pwd():
-    return render_template("home/pwd.html")
+    form = PwdForm()
+    if form.validate_on_submit():
+        data = form.data
+        user = User.query.filter_by(name=session["user"]).first()
+        if not user.check_pwd(data["old_pwd"]):
+            flash("旧密码错误",'err')
+            return redirect(url_for("user.pwd"))
+        from werkzeug.security import generate_password_hash
+        user.pwd = generate_password_hash(data["new_pwd"])
+        db.session.add(user)
+        db.session.commit()
+        flash("修改密码成功！请重新登陆", "ok")
+        return redirect(url_for("home.logout"))
+    return render_template("home/pwd.html",form=form)
 
 
 # 评论
@@ -128,10 +143,15 @@ def comments():
     return render_template("home/comments.html")
 
 
-# 登陆日志
-@home.route("/loginlog/")
-def loginlog():
-    return render_template("home/loginlog.html")
+# 会员日志列表
+@home.route("/loginlog/list/<int:page>", methods=['GET'])
+def userloginlog_list(page=None):
+    if page is None:
+        page = 1
+    page_data = UserLog.query.order_by(
+        UserLog.addtime.desc()
+    ).paginate(page=page, per_page=10)
+    return render_template("home/loginlog.html",page_data=page_data)
 
 
 # 电影收藏
@@ -143,13 +163,27 @@ def moviecol():
 
 @home.route("/")
 def index():
-    return render_template("home/index.html ")
+    tag = Tag.query.all()
+    tid = request.args.get("tid",0)
+    star = request.args.get("star",0)
+    time = request.args.get("time",0)
+    pm = request.args.get("pm",0)
+    cm = request.args.get("cm",0)
+    p = dict(
+        tid=tid,
+        star=star,
+        time=time,
+        pm=pm,
+        cm=pm
+    )
+    return render_template("home/index.html ",tag = tag,p=p)
 
 
 # 动画
 @home.route("/animation/")
 def animation():
-    return render_template("home/animation.html")
+    data = Preview.query.all()
+    return render_template("home/animation.html",data=data)
 
 
 # 搜索

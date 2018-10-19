@@ -99,7 +99,7 @@ class LoginForm(FlaskForm):
         ],
         description="账号",
         render_kw={
-            "class": "form-control",
+            "class": "form-control import-lg",
             "placeholder": "请输入账号！"
         }
     )
@@ -110,7 +110,7 @@ class LoginForm(FlaskForm):
         ],
         description="密码",
         render_kw={
-            "class": "form-control",
+            "class": "form-control import-lg",
             "placeholder": "请输入密码！"
         }
     )
@@ -159,18 +159,18 @@ class UserDetailForm(FlaskForm):
         }
     )
     face = FileField(
-        label="文件",
+        label="头像",
         validators=[
-            DataRequired("请上传文件！")
+            DataRequired("上传头像！")
         ],
-        description="文件",
+        description="上传头像"
     )
     info = TextAreaField(
         label="简介",
         validators=[
             DataRequired("请输入简介！")
         ],
-        description="片名",
+        description="简介",
         render_kw={
             "class": "form-control",
             "row": "10!"
@@ -179,6 +179,44 @@ class UserDetailForm(FlaskForm):
     submit = SubmitField(
         '保存修改',
         render_kw={
-            "class": "btn btn-success btn-block btn-flat"
+            "class": "btn btn-success"
         }
     )
+
+class PwdForm(FlaskForm):
+    old_pwd = PasswordField(
+        label="旧密码",
+        validators=[
+            DataRequired("请输入旧密码！")
+        ],
+        description="旧密码",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入旧密码!",
+        }
+    )
+    new_pwd = PasswordField(
+        label="新密码",
+        validators=[
+            DataRequired("请输入新密码！")
+        ],
+        description="新密码",
+        render_kw={
+            "class": "form-control",
+            "placeholder": "请输入新密码!",
+        }
+    )
+    submit = SubmitField(
+        "修改密码",
+        render_kw={
+            "class": "btn btn-success"
+        }
+    )
+
+    def validate_old_pwd(self, field):
+        from flask import session
+        pwd = field.data
+        name = session["user"]
+        user = User.query.filter_by(name=name).first()
+        if not user.check_pwd(pwd):
+            raise ValidationError("旧密码错误！")

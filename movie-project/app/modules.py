@@ -147,7 +147,7 @@ class Admin(db.Model):
     adminlogs = db.relationship("Adminlog", backref="admin")  # 管理员登陆日志外键关联关系
     oplogs = db.relationship("Oplog", backref="admin")  # 管理员操作日志外键关联关系
     addtime = db.Column(db.DATETIME, index=True, default=datetime.now)  # 时间
-    role = db.relationship("Role",backref="admin")
+    role = db.relationship("Role", backref="admin")
 
     def __repr__(self):
         return "<Admin %r>" % self.name
