@@ -17,8 +17,10 @@ def spider(url) :
     selector = html.etree.HTML(urltext.text)
     content_field = selector.xpath('//div[@class="l_post l_post_bright"]')
     item = {}
+    print(content_field)
     for each in content_field:
         replay_info = json.load(each.xpath('@data-field')[0].replace('&quot',''))
+        print(replay_info)
         author = replay_info['author']['user_name']
         content = '黎明'
         replay_time = replay_info['content']['date']
