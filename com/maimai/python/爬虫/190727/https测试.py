@@ -1,6 +1,6 @@
 import urllib.request
 import urllib.parse
-import ssl
+import ssl,json
 
 context = ssl._create_unverified_context()
 
@@ -29,12 +29,20 @@ full_url = url + '?' + url_para
 
 context = ssl._create_unverified_context()
 
+list = []
 with urllib.request.urlopen(full_url, context=context) as response:
   html = response.read()
-  print(response)#200是正常响应
+  html = html.decode("utf-8")
+  data = json.loads(html)['foods']
+  for each in data:
+     list.append(each['name'])
 
-req = urllib.request.Request(url, data=data)
+print(len(list))#200是正常响应
 
-with  urllib.request.urlopen(req, context=context) as response:
- html = response.read()
- print(html)
+# req = urllib.request.Request(url, data=data)
+#
+# print(req)
+#
+# with  urllib.request.urlopen(req, context=context) as response:
+#  html = response.read()
+#  print(html)

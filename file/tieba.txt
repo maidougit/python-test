@@ -1,0 +1,24 @@
+https://record.boohee.com/api/v2/eatings/hot?
+
+page=1&
+token=B1oNpyd1ypDPjQ8vTN93jCAd8b4zXeyq&
+user_key=0342d302-62c6-4c98-82e9-72537d9d2d6c&
+app_version=7.1.8&
+app_device=Android&
+os_version=5.1.1&
+phone_model=hm+note+1lte&
+channel=undefind&
+app_key=one
+
+
+
+ https://record.boohee.com/api/v2/eatings/hot?
+ page=1&
+ token=B1oNpyd1ypDPjQ8vTN93jCAd8b4zXeyq&
+ user_key=0342d302-62c6-4c98-82e9-72537d9d2d6c&
+ app_version=7.1.8&
+ app_device=Android&
+ os_version=5.1.1&
+ phone_model=hm+note+1lte&
+ channel=undefind&
+ app_key=one
