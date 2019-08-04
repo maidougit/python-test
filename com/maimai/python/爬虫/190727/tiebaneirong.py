@@ -15,7 +15,7 @@ def towrite(contentdict):
 def spider(url) :
     urltext = requests.get(url)
     selector = html.etree.HTML(urltext.text)
-    content_field = selector.xpath('//div[@class="l_post l_post_bright"]')
+    content_field = selector.xpath('//div[@class="l_post j_l_post l_post_bright  "]')
     item = {}
     print(content_field)
     for each in content_field:
@@ -24,22 +24,21 @@ def spider(url) :
         author = replay_info['author']['user_name']
         content = '黎明'
         replay_time = replay_info['content']['date']
-        print(content)
-        print(author)
         print(replay_time)
-        item['user_name'] = author
-        item['topic_replay_time'] = replay_time
-        item['topic_replay_content'] = content
-        towrite(item)
+        # item['user_name'] = author
+        # item['topic_replay_time'] = replay_time
+        # item['topic_replay_content'] = content
+        # towrite(item)
 
 if __name__ == '__main__':
     pool = ThreadPool(4)
     f = open('F:\\python-test\\file\\tieba.txt', 'a')
     page = []
-    for i in range(1, 21):
-        newpage = 'http://tieba.baidu.com/f?kw=python&ie=utf-8&pn=' + str(i)
+    for i in range(1, 2):
+        newpage = 'http://tieba.baidu.com/p/6213577912?pn=' + str(i)
         page.append(newpage)
 
+    #print(page)
     results = pool.map(spider ,page)
     pool.close()
     pool.join()
