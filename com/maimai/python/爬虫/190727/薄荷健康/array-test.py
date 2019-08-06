@@ -1,11 +1,13 @@
-
-
+from array import array
 
 result = [x + 1 for x in range(1)]
 
 print(result)
 
-obj = []
-obj[1] = 1
 
-print(obj)
+
+a=[[1, 2], [3, 4], [5, 6]]
+
+b = tuple(tuple([y for y in x]) for x in a)
+
+print(b)
