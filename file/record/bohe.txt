@@ -1,0 +1,664 @@
+查询结果字段
+pageSize  = 30
+
+条件
+page	      1
+token	      zkpD6bSgHZipXscYHVKZBKZfzyqTRDcf
+user_key	  0342d302-62c6-4c98-82e9-72537d9d2d6c
+app_version	  7.1.8
+app_device	  Android
+os_version	  5.1.1
+phone_model	  hm note 1lte
+channel	      undefind
+app_key	      one
+
+{
+	"page": 5,
+	"total_pages": 55,
+	"foods": [{
+		"id": 345170,
+		"code": "fd49678b",
+		"name": "苏花 小馒头",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/1/10/mid_photo_url_0460eaac701161128787c2d34fcc249d.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "382"
+	}, {
+		"id": 358409,
+		"code": "fd263edd",
+		"name": "宜皇 花芸豆",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/2/16/mid_photo_url_743e9400270a166c4491085bd606f281.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "339"
+	}, {
+		"id": 362529,
+		"code": "fd86aecb",
+		"name": "小奶花 奶制品",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/2/27/mid_photo_url_b9481d90f2a75b1d6644d6efd52439ed.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "394"
+	}, {
+		"id": 374911,
+		"code": "fd465031",
+		"name": "花美 香菇挂面",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/3/23/mid_photo_url_134AE44A22D7.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "353"
+	}, {
+		"id": 392580,
+		"code": "fdcf8015",
+		"name": "花姐 胶多多",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/4/21/mid_photo_url_29F3FEAB1C4C.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "43"
+	}, {
+		"id": 401596,
+		"code": "fdf53035",
+		"name": "苏花 山楂条",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/5/6/mid_photo_url_3bf6fc39c6bc60db5f5d634dae9c664b.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "344"
+	}, {
+		"id": 406072,
+		"code": "fd06b128",
+		"name": "日花 卤花生",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/5/14/mid_photo_url_3879f2e3f9a3b2d841361394cdd2808d.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "570"
+	}, {
+		"id": 415640,
+		"code": "fd0b241f",
+		"name": "豫花 刀削挂面",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/5/29/mid_photo_url_9E1561974BD5.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "347"
+	}, {
+		"id": 423395,
+		"code": "fdb609ff",
+		"name": "公社联盟 米花",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/6/11/mid_photo_url_B8DE8706D9C4.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "556"
+	}, {
+		"id": 425119,
+		"code": "fda56aa9",
+		"name": "粤花 午餐肉",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/6/14/mid_photo_url_5263BF025564.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "270"
+	}, {
+		"id": 422396,
+		"code": "fd880f82",
+		"name": "獐子岛 麻辣花蛤",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/6/9/mid_photo_url_124f5e3b21cd4cf188b178ee860d71d6.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "183"
+	}, {
+		"id": 437800,
+		"code": "fd121b2c",
+		"name": "晋花 龙口粉丝",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/7/10/mid_photo_url_D1A6000730D3.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "355"
+	}, {
+		"id": 435228,
+		"code": "fdf44df5",
+		"name": "花滋味 鲜花饼",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/7/4/mid_photo_url_C60BF9F64DD8.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "445"
+	}, {
+		"id": 433772,
+		"code": "fdb77b96",
+		"name": "雨润 肘花火腿",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/7/1/mid_photo_url_9473b873cc24802f8d2dac473583bf65.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "155"
+	}, {
+		"id": 436403,
+		"code": "fdd11520",
+		"name": "花湖 牛奶",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/7/7/mid_photo_url_d196de4b5d446b411139d2ac44142d71.jpg",
+		"is_liquid": true,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "48"
+	}, {
+		"id": 443019,
+		"code": "fd9c42e1",
+		"name": "正大 米花",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2018/7/20/mid_photo_url_a38c3573f9602a07770de45159012d8b.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "186"
+	}, {
+		"id": 461402,
+		"code": "fddf6b97",
+		"name": "天利花 酥饺",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2019/1/9/mid_photo_url_BCA6294CC50A.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "443"
+	}, {
+		"id": 7208,
+		"code": "dawanhuadoufuhaimitang",
+		"name": "打碗花豆腐海米汤",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/9/19/mid_photo_url_354cdfbc6e8b4976a5d1c660d975919f.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "28"
+	}, {
+		"id": 158803,
+		"code": "fd517438",
+		"name": "花之语 1+2咖啡",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/6/17/mid_photo_url_2E9793C10DF7.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "406"
+	}, {
+		"id": 171831,
+		"code": "fd35253a",
+		"name": "鹏程 肉花肠",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/8/2/mid_photo_url_4F0191D93CDF.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "132"
+	}, {
+		"id": 174527,
+		"code": "fdf86ef7",
+		"name": "明花 罐头",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/8/12/mid_photo_url_6C7878BA17EE.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "67"
+	}, {
+		"id": 192850,
+		"code": "fd2d09d7",
+		"name": "八月花 桂花酱",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/10/23/mid_photo_url_BDB2A18EDB7F.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "263"
+	}, {
+		"id": 193419,
+		"code": "fd190ace",
+		"name": "花普堂 大麦茶",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/10/26/mid_photo_url_c6816d81afa54b569b2267a70f893cd4.jpg",
+		"is_liquid": true,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "0"
+	}, {
+		"id": 134079,
+		"code": "fd21e08f",
+		"name": "长寿花 山椒凤爪",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/4/15/mid_photo_url_0c7924f6cfa448d6b49977a56d99d0f8.jpg",
+		"is_liquid": false,
+		"health_light": 3,
+		"weight": "100",
+		"calory": "140"
+	}, {
+		"id": 164652,
+		"code": "fd256f79",
+		"name": "华花牛 酸奶",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/7/4/mid_photo_url_CAECE6914489.jpg",
+		"is_liquid": true,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "33"
+	}, {
+		"id": 195894,
+		"code": "fde96d03",
+		"name": "明花 芒果果酱",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2016/11/4/mid_photo_url_DAAB74353F7E.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "140"
+	}, {
+		"id": 214107,
+		"code": "fdd9ff2f",
+		"name": "陇上花牛 苹果醋",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2017/2/3/mid_photo_url_4ADA474DDF7D.jpg",
+		"is_liquid": true,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "26"
+	}, {
+		"id": 223182,
+		"code": "fd594f60",
+		"name": "花姐 山楂小方",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2017/3/9/mid_photo_url_6F76CF326CFA.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "338"
+	}, {
+		"id": 231966,
+		"code": "fd3436ed",
+		"name": "咸虾花",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2017/4/7/mid_photo_url_26edb15dd7e84f66fefb3bde85340045.jpg",
+		"is_liquid": false,
+		"health_light": 2,
+		"weight": "100",
+		"calory": "250"
+	}, {
+		"id": 262389,
+		"code": "fd91d647",
+		"name": "天利花 岐山擀面皮",
+		"thumb_image_url": "https://s.boohee.cn/house/upload_food/2017/6/20/mid_photo_url_595CA611B346.jpg",
+		"is_liquid": false,
+		"health_light": 1,
+		"weight": "100",
+		"calory": "191"
+	}]
+}
+
+
+
+明细json
+
+
+{
+	"id": 56,
+	"code": "mifan_zheng",
+	"name": "米饭",
+	"calory": "116",
+	"weight": "100",
+	"health_light": 2,
+	"is_liquid": false,
+	"thumb_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/mid_photo_url_df59f70395bd540fd1eb80e58a0b9641.jpg",
+	"large_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/big_photo_url_65becc42c18ba60b5be2125a20ba57d5.jpg",
+	"uploader": "",
+	"appraise": "一种碳水化合物和水分含量都较高的主食，但它是身体所需热量的主要来源之一，可占全天热量的55%左右，减肥期间适量食用。",
+	"protein": "2.6",
+	"fat": "0.3",
+	"fiber_dietary": "0.3",
+	"carbohydrate": "25.9",
+	"gi": "90.0",
+	"gl": "21.5",
+	"compare": {},
+	"recipe": false,
+	"recipe_type": null,
+	"units": [{
+		"unit_id": 207,
+		"amount": "1.0",
+		"unit": "两 食堂的",
+		"unit_name": "两 食堂的",
+		"weight": "145.0",
+		"eat_weight": "145.0",
+		"calory": "168.2"
+	}, {
+		"unit_id": 233,
+		"amount": "1.0",
+		"unit": "勺",
+		"unit_name": "勺",
+		"weight": "40.0",
+		"eat_weight": "40.0",
+		"calory": "46.4"
+	}, {
+		"unit_id": 134,
+		"amount": "1.0",
+		"unit": "盒（快餐饭盒）",
+		"unit_name": "盒（快餐饭盒）",
+		"weight": "280.0",
+		"eat_weight": "280.0",
+		"calory": "324.8"
+	}, {
+		"unit_id": 980,
+		"amount": "1.0",
+		"unit": "碗",
+		"unit_name": "碗",
+		"weight": "200.0",
+		"eat_weight": "200.0",
+		"calory": "232.0"
+	}, {
+		"unit_id": 49,
+		"amount": "1.0",
+		"unit": "碗(小乐扣)",
+		"unit_name": "碗(小乐扣)",
+		"weight": "100.0",
+		"eat_weight": "100.0",
+		"calory": "116.0"
+	}, {
+		"unit_id": 132,
+		"amount": "1.0",
+		"unit": "碗（小碗）",
+		"unit_name": "碗（小碗）",
+		"weight": "150.0",
+		"eat_weight": "150.0",
+		"calory": "174.0"
+	}],
+	"ingredient": {
+		"calory": "116.0",
+		"protein": "2.6",
+		"fat": "0.3",
+		"carbohydrate": "25.9",
+		"fiber_dietary": "0.3",
+		"vitamin_a": "0.0",
+		"vitamin_c": "0.0",
+		"vitamin_e": "",
+		"carotene": "0.0",
+		"thiamine": "0.0",
+		"lactoflavin": "0.0",
+		"niacin": "1.9",
+		"cholesterol": "0.0",
+		"magnesium": "15.0",
+		"calcium": "7.0",
+		"iron": "1.3",
+		"zinc": "0.9",
+		"copper": "0.1",
+		"manganese": "0.6",
+		"kalium": "30.0",
+		"phosphor": "62.0",
+		"natrium": "2.5",
+		"selenium": "0.4"
+	},
+	"lights": {
+		"calory": "低热量",
+		"protein": "",
+		"carbohydrate": "",
+		"fat": "低脂肪",
+		"fiber_dietary": "",
+		"gi": "高GI",
+		"gl": "高GL"
+	},
+	"comments_ct": 125
+} {
+	"id": 56,
+	"code": "mifan_zheng",
+	"name": "米饭",
+	"calory": "116",
+	"weight": "100",
+	"health_light": 2,
+	"is_liquid": false,
+	"thumb_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/mid_photo_url_df59f70395bd540fd1eb80e58a0b9641.jpg",
+	"large_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/big_photo_url_65becc42c18ba60b5be2125a20ba57d5.jpg",
+	"uploader": "",
+	"appraise": "一种碳水化合物和水分含量都较高的主食，但它是身体所需热量的主要来源之一，可占全天热量的55%左右，减肥期间适量食用。",
+	"protein": "2.6",
+	"fat": "0.3",
+	"fiber_dietary": "0.3",
+	"carbohydrate": "25.9",
+	"gi": "90.0",
+	"gl": "21.5",
+	"compare": {},
+	"recipe": false,
+	"recipe_type": null,
+	"units": [{
+		"unit_id": 207,
+		"amount": "1.0",
+		"unit": "两 食堂的",
+		"unit_name": "两 食堂的",
+		"weight": "145.0",
+		"eat_weight": "145.0",
+		"calory": "168.2"
+	}, {
+		"unit_id": 233,
+		"amount": "1.0",
+		"unit": "勺",
+		"unit_name": "勺",
+		"weight": "40.0",
+		"eat_weight": "40.0",
+		"calory": "46.4"
+	}, {
+		"unit_id": 134,
+		"amount": "1.0",
+		"unit": "盒（快餐饭盒）",
+		"unit_name": "盒（快餐饭盒）",
+		"weight": "280.0",
+		"eat_weight": "280.0",
+		"calory": "324.8"
+	}, {
+		"unit_id": 980,
+		"amount": "1.0",
+		"unit": "碗",
+		"unit_name": "碗",
+		"weight": "200.0",
+		"eat_weight": "200.0",
+		"calory": "232.0"
+	}, {
+		"unit_id": 49,
+		"amount": "1.0",
+		"unit": "碗(小乐扣)",
+		"unit_name": "碗(小乐扣)",
+		"weight": "100.0",
+		"eat_weight": "100.0",
+		"calory": "116.0"
+	}, {
+		"unit_id": 132,
+		"amount": "1.0",
+		"unit": "碗（小碗）",
+		"unit_name": "碗（小碗）",
+		"weight": "150.0",
+		"eat_weight": "150.0",
+		"calory": "174.0"
+	}],
+	"ingredient": {
+		"calory": "116.0",
+		"protein": "2.6",
+		"fat": "0.3",
+		"carbohydrate": "25.9",
+		"fiber_dietary": "0.3",
+		"vitamin_a": "0.0",
+		"vitamin_c": "0.0",
+		"vitamin_e": "",
+		"carotene": "0.0",
+		"thiamine": "0.0",
+		"lactoflavin": "0.0",
+		"niacin": "1.9",
+		"cholesterol": "0.0",
+		"magnesium": "15.0",
+		"calcium": "7.0",
+		"iron": "1.3",
+		"zinc": "0.9",
+		"copper": "0.1",
+		"manganese": "0.6",
+		"kalium": "30.0",
+		"phosphor": "62.0",
+		"natrium": "2.5",
+		"selenium": "0.4"
+	},
+	"lights": {
+		"calory": "低热量",
+		"protein": "",
+		"carbohydrate": "",
+		"fat": "低脂肪",
+		"fiber_dietary": "",
+		"gi": "高GI",
+		"gl": "高GL"
+	},
+	"comments_ct": 125
+}
+
+
+微量元素
+https://food.boohee.com/fb/v1/foods/mifan_zheng/ingredient_only.json
+
+{
+	"code": "mifan_zheng",
+	"name": "米饭",
+	"thumb_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/mid_photo_url_df59f70395bd540fd1eb80e58a0b9641.jpg",
+	"large_image_url": "https://s.boohee.cn/house/upload_food/2019/1/1/big_photo_url_65becc42c18ba60b5be2125a20ba57d5.jpg",
+	"type": "food",
+	"ingredient": {
+		"main_ingredient": {
+			"calory": "116.0",
+			"protein": "2.6",
+			"fat": "0.3",
+			"saturated_fat": "",
+			"fatty_acid": "",
+			"mufa": "",
+			"pufa": "",
+			"cholesterol": "0.0",
+			"carbohydrate": "25.9",
+			"sugar": "",
+			"fiber_dietary": "0.3",
+			"natrium": "2.5",
+			"alcohol": "0.0"
+		},
+		"vitamin_ingredient": {
+			"vitamin_a": "0.0",
+			"carotene": "0.0",
+			"vitamin_d": "",
+			"vitamin_e": "",
+			"vitamin_k": "",
+			"thiamine": "0.0",
+			"lactoflavin": "0.0",
+			"vitamin_b6": "",
+			"vitamin_b12": "",
+			"vitamin_c": "0.0",
+			"niacin": "1.9",
+			"folacin": "",
+			"pantothenic": "",
+			"biotin": "",
+			"choline": ""
+		},
+		"minerals_ingredient": {
+			"phosphor": "62.0",
+			"kalium": "30.0",
+			"magnesium": "15.0",
+			"calcium": "7.0",
+			"iron": "1.3",
+			"zinc": "0.9",
+			"iodine": "",
+			"selenium": "0.4",
+			"copper": "0.1",
+			"fluorine": "",
+			"manganese": "0.6"
+		},
+		"main": {
+			"calory": "热量",
+			"protein": "蛋白质",
+			"fat": "脂肪",
+			"saturated_fat": "-饱和脂肪",
+			"fatty_acid": "-反式脂肪",
+			"mufa": "-单不饱和脂肪",
+			"pufa": "-多不饱和脂肪",
+			"cholesterol": "胆固醇",
+			"carbohydrate": "碳水化合物",
+			"sugar": "-糖",
+			"fiber_dietary": "膳食纤维",
+			"natrium": "钠",
+			"alcohol": "酒精度"
+		},
+		"main_unit": {
+			"calory": "千卡",
+			"protein": "克",
+			"fat": "克",
+			"saturated_fat": "克",
+			"fatty_acid": "克",
+			"mufa": "克",
+			"pufa": "克",
+			"cholesterol": "毫克",
+			"carbohydrate": "克",
+			"sugar": "克",
+			"fiber_dietary": "克",
+			"natrium": "毫克",
+			"alcohol": "%vol"
+		},
+		"vitamin": {
+			"vitamin_a": "维生素A",
+			"carotene": "胡萝卜素",
+			"vitamin_d": "维生素D",
+			"vitamin_e": "维生素E",
+			"vitamin_k": "维生素K",
+			"thiamine": "维生素B1",
+			"lactoflavin": "维生素B2",
+			"vitamin_b6": "维生素B6",
+			"vitamin_b12": "维生素B12",
+			"vitamin_c": "维生素C",
+			"niacin": "烟酸",
+			"folacin": "叶酸",
+			"pantothenic": "泛酸",
+			"biotin": "生物素",
+			"choline": "胆碱"
+		},
+		"vitamin_unit": {
+			"vitamin_a": "微克",
+			"carotene": "微克",
+			"vitamin_d": "微克",
+			"vitamin_e": "毫克",
+			"vitamin_k": "微克",
+			"thiamine": "毫克",
+			"lactoflavin": "毫克",
+			"vitamin_b6": "毫克",
+			"vitamin_b12": "微克",
+			"vitamin_c": "毫克",
+			"niacin": "毫克",
+			"folacin": "微克",
+			"pantothenic": "毫克",
+			"biotin": "微克",
+			"choline": "毫克"
+		},
+		"minerals": {
+			"phosphor": "磷",
+			"kalium": "钾",
+			"magnesium": "镁",
+			"calcium": "钙",
+			"iron": "铁",
+			"zinc": "锌",
+			"iodine": "碘",
+			"selenium": "硒",
+			"copper": "铜",
+			"fluorine": "氟",
+			"manganese": "锰"
+		},
+		"minerals_unit": {
+			"phosphor": "毫克",
+			"kalium": "毫克",
+			"magnesium": "毫克",
+			"calcium": "毫克",
+			"iron": "毫克",
+			"zinc": "毫克",
+			"iodine": "微克",
+			"selenium": "微克",
+			"copper": "毫克",
+			"fluorine": "毫克",
+			"manganese": "毫克"
+		},
+		"light": {
+			"calory": "低热量",
+			"protein": "",
+			"carbohydrate": "",
+			"fat": "低脂肪",
+			"fiber_dietary": "",
+			"gi": "高GI",
+			"gl": "高GL"
+		}
+	}
+}

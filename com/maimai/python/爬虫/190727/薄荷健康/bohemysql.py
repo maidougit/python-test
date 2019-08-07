@@ -9,17 +9,24 @@ import threading
 
 context = ssl._create_unverified_context()
 
-#
+#食物详情
 jsonurl = 'https://food.boohee.com/fb/v1/foods/pingguo_junzhi.json'
+#微量元素
+ingredient = 'https://food.boohee.com/fb/v1/foods/li_junzhi/ingredient_only.json '
+
+#食物等级
+rankings = 'https://food.boohee.com/fb/v1/foods/488/rankings.json '
+
 
 url = 'https://record.boohee.com/api/v2/eatings/hot'
 baseurl = 'http://s.boohee.cn'
 
-db = pm.connect(host='localhost', port=3306,
-                     user='root', passwd='root', db='blog', charset='utf8')
+
+db = pm.connect(host='192.168.1.56', port=3306,
+                     user='root', passwd='Yly,1O1', db='t_yly_reptile', charset='utf8')
 
 # SQL 插入语句
-sql = "INSERT INTO blog.bohejiankang (food_id, calory, weight, code, name, thumb_image_name, health_light, is_liquid) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+sql = "INSERT INTO  bohejiankang (food_id, calory, weight, code, name, thumb_image_name, health_light, is_liquid) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
 
 # 使用cursor()方法获取操作游标
 cursor = db.cursor()
