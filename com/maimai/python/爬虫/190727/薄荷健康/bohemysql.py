@@ -100,7 +100,7 @@ if __name__ == '__main__':
     manager = Manager()
     lock = manager.Lock()
     # pool = ThreadPool(processes=8)
-    for i in range(1, 18):
+    for i in range(1, 20):
         # pool.apply_async(spider, (i, lock))
         spider(i)
     print(list)
