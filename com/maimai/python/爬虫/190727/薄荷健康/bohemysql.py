@@ -26,7 +26,7 @@ cursor = db.cursor()
 lock = threading.Lock()
 
 list = []
-def spider(page, lock) :
+def spider(page, lock='') :
     dealList = []
     print("deal data  ing ......" , page)
     data = {}
@@ -61,12 +61,26 @@ def spider(page, lock) :
         #dealdata = tuple(list)
         list.append(dealList)
         #pymysql.err.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES (1750,'241.0','100.0','dizhinailao','低脂奶酪',1,2,0),(872,'54.0','10' at line 1")
-
+        # dealdata = tuple(tuple([y for y in x]) for x in dealList)
+        # try:
+        #     # 执行sql语句
+        #     cursor.executemany(sql, dealdata)
+        #     # 提交到数据库执行
+        #     db.commit()
+        # except pm.Warning as w:
+        #     print(repr(w))
+        #     # 如果发生错误则回滚
+        #     db.rollback()
+        # # 关闭游标
+        # cursor.close()
+        # # 关闭数据库连接
+        # db.close()
 
 
 
 def dealdata(data):
     print(len(data))
+
     dealdata = tuple(tuple([y for y in x]) for x in data)
     try:
         # 执行sql语句
@@ -77,10 +91,7 @@ def dealdata(data):
         print(repr(w))
         # 如果发生错误则回滚
         db.rollback()
-    # 关闭游标
-    cursor.close()
-    # 关闭数据库连接
-    db.close()
+
 
 
 if __name__ == '__main__':
@@ -88,11 +99,21 @@ if __name__ == '__main__':
     # page = [x + 1 for x in range(18)]
     manager = Manager()
     lock = manager.Lock()
-    pool = ThreadPool(processes=8)
+    # pool = ThreadPool(processes=8)
     for i in range(1, 18):
-        pool.apply_async(spider, (i, lock))
+        # pool.apply_async(spider, (i, lock))
+        spider(i)
+    print(list)
+    for i in list:
+        if i == 21:
+            continue
+        else:
+            dealdata(i)
 
-    dealdata(list)
     # results = pool.map(spider ,page)
-    pool.close()
-    pool.join()
+    # pool.close()
+    # pool.join()
+    # 关闭游标
+    cursor.close()
+    # 关闭数据库连接
+    db.close()
