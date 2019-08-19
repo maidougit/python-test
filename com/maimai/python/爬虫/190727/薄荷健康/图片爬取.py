@@ -3,6 +3,7 @@ from urllib.request import urlretrieve
 import requests
 from multiprocessing.dummy import Pool as ThreadPool
 import pymysql as pm
+import string
 
 
 os.makedirs('./image/', exist_ok=True)
@@ -66,14 +67,18 @@ def db():
 # dealHttpsByObj
 def batchDownloadImage(row):
    itemimage = row['name'] + "." + row['thumb_image_name'].split('.')[-1]
-   itemimage = eval(repr(itemimage).replace('/', '').replace("\\", ''))
+   itemimage = deal_image(itemimage)
    print("start download iamge  ", itemimage)
    pic = requests.get(row['thumb_image_name'])
-   fp = open('F:\\python-test\\file\\image\\bohe\\'  + itemimage, 'wb')
+   fp = open('F:\\python-test\\file\\image\\bohe1\\'  + itemimage, 'wb')
    fp.write(pic.content)
    fp.close()
 
 
+def deal_image(each):
+    str = eval(repr(each).replace("/", ""))
+    str = str.replace(" ", "")
+    return str
 
 #主类
 if __name__ == '__main__':
