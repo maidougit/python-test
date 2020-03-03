@@ -9,7 +9,7 @@ for idx in range(0,6):
         r+=(i-arr[idx])*rat[idx]
         print (i-arr[idx])*rat[idx]
         i=arr[idx]
-print r
+print (r)
 
 #一个整数，它加上100和加上268后都是一个完全平方数
 for m in range(10000):

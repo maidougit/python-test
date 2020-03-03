@@ -6,7 +6,7 @@ url = 'https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq
 driver.get(url)
 #智能等待
 driver.implicitly_wait(5)
-data = driver.file_detector('//*[@id="song_box"]/div[2]/ul[2]/li[1]/div/div[2]/span[1]/a/span[1]/a').get_attribute('href')
+data = driver.file_detector('//*[@id="song_box"]/div[2]/ul[2]/li[1]/div/div[2]/span[1]/a').get_attribute('href')
 
 print(data)
 
