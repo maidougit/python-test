@@ -15,6 +15,8 @@ from scrapy.settings import Settings
 import happybase
 import functools
 
+from scrapy.exporters import JsonItemExporter
+
 
 class FirstScrapyPipeline:
     def process_item(self, item, spider):
@@ -189,3 +191,29 @@ class PictureDownload(ImagesPipeline):
         super(PictureDownload, self).file_path(request, response, info)
         image_guid = request.url
         return request.url
+
+
+class QiubaiProjPipeline(object):
+    # 调用 scrapy 提供的 json exporter 导出 json 文件
+    def __init__(self):
+        self.file = open('questions_exporter.json', 'wb')
+        # 初始化 exporter 实例，执行输出的文件和编码
+        self.exporter = JsonItemExporter(self.file, encoding='utf-8', ensure_ascii=False)
+        # 开启倒入数据
+        self.exporter.start_exporting()
+
+
+def close_spider(self, spider):
+    self.exporter.finish_exporting()
+    self.file.close()
+
+
+def process_item(self, item, spider):
+    '''
+    使用 scrapy.exporters.JsonItemExporter 生成的文件
+    '''
+    print("########### pipelines begin ###############")
+    # print(item)
+    self.exporter.export_item(item)
+    print("########### pipelines end ###############")
+    return item

@@ -111,3 +111,17 @@ class ImageItem(scrapy.Item):
      _id = scrapy.Field()
      images = scrapy.Field()
      image_paths = scrapy.Field()
+
+
+class QiubaiProjItem(scrapy.Item):
+    # define the fields for your item here like:
+    #保存头像链接
+    image_url = scrapy.Field()
+    #保存名字
+    name = scrapy.Field()
+    #保存年龄
+    age = scrapy.Field()
+    #保存内容
+    content = scrapy.Field()
+    #好笑的个数
+    haha_count = scrapy.Field()
