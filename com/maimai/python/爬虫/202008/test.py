@@ -56,8 +56,12 @@ print(chinese_str_url)
 
 depart_ment = ['儿科', '皮肤科', '妇产科', '口腔科','新生儿科']
 
-base_url = "https://www.guahao.com/json/white/search/eteams?q=&dept={dept}&page=1&cid={cid}&pid=2&_=1604828782843"
+base_url = "https://www.guahao.com/json/white/search/eteams?q=&dept={dept}&page=1&cid=&pid=&_=1604828782843"
 
+base_url_list = []
+for each  in depart_ment:
+    base_url_list.append(base_url.format(dept=each))
+print(json.dumps(base_url_list))
 
 # with open("area_id.json", 'r') as load_f:
 #     result_list = []
@@ -72,11 +76,11 @@ base_url = "https://www.guahao.com/json/white/search/eteams?q=&dept={dept}&page=
 #     base_url_list.append(base_url.format(dept=each['department'], cid=each['areaId']))
 #
 # print(json.dumps(base_url_list))
-
-
-with open("start_url.json", 'r') as load_f:
-    load_dict = json.load(load_f)
-    print(load_dict)
-
-list = io.open(r"start_url.json", "r", encoding="gbk")
-print(list[0])
+#
+#
+# with open("start_url.json", 'r') as load_f:
+#     load_dict = json.load(load_f)
+#     print(load_dict)
+#
+# list = io.open(r"start_url.json", "r", encoding="gbk")
+# print(list[0])
