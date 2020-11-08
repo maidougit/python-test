@@ -6,11 +6,11 @@ l = []
 y = int(input('数组长度'))
 #三个数组循环
 for i in range(y):
-    x = int(raw_input('integer:\n'))
+    x = int(input('integer:\n'))
     l.append(x)
 # 排序
 l.sort()
-print l
+print (l)
 
 
 #斐波那契 测试
@@ -19,5 +19,5 @@ def feibonaqie(n):
         return 1;
     return feibonaqie(n-1) + feibonaqie(n-2)
 
-print feibonaqie(10)
+print (feibonaqie(10))
 
