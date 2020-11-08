@@ -17,7 +17,7 @@ import random
 
 #日志文件
 logging.basicConfig(level=logging.DEBUG,#控制台打印的日志级别
-                    filename=r'F:\python-test\file\image\log\record-190810-004.log',
+                    filename=r'D:\study\python-test\file\log\record-190810-004.log',
                     filemode='a',##模式，有w和a，w就是写模式，每次都会重新写日志，覆盖之前的日志
                     #a是追加模式，默认如果不写的话，就是追加模式
                     format=
@@ -432,7 +432,7 @@ def array_page(totalpage,search):
 
 #查询搜索条件为1
 def select_search_not_deal():
-    select_search_sql = "select chinese_item from chinese_item where  status = 12"
+    select_search_sql = "select chinese_item from chinese_item where  status = 12 limit 10"
     sdb8 = db()
     cursor = sdb8.cursor()
     try:
@@ -462,10 +462,11 @@ def random_num():
 #主类
 if __name__ == '__main__':
     # spider("再")
-    pool = ThreadPool(4)
+    # pool = ThreadPool(4)
 
     dbdata = select_search_not_deal()
-    dealresults = pool.map(spider_data_by_chinese_item, dbdata)
-
-    pool.close()
-    pool.join()
+    print(dbdata)
+    # dealresults = pool.map(spider_data_by_chinese_item, dbdata)
+    #
+    # pool.close()
+    # pool.join()

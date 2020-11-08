@@ -1,0 +1,14 @@
+setup.py
+first_scrapy/__init__.py
+first_scrapy/items.py
+first_scrapy/middlewares.py
+first_scrapy/pipelines.py
+first_scrapy/settings.py
+first_scrapy/spiders/__init__.py
+first_scrapy/spiders/dyttSpider_spilder.py
+first_scrapy/spiders/quotes_spider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
