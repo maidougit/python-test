@@ -12,6 +12,7 @@ BOT_NAME = 'first_scrapy'
 SPIDER_MODULES = ['first_scrapy.spiders']
 NEWSPIDER_MODULE = 'first_scrapy.spiders'
 
+LOG_LEVEL = "WARNING"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'first_scrapy (+http://www.yourdomain.com)'
@@ -62,9 +63,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'first_scrapy.pipelines.FirstScrapyPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'first_scrapy.pipelines.WeiyiScrapyPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

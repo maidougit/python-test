@@ -2,7 +2,7 @@
 import random
 import functools
 from functools import reduce
-import urllib.parse
+import urllib.parse,json,io
 from urllib import parse
 
 
@@ -39,6 +39,44 @@ chinese_str_url = urllib.parse.quote(chinese_str)
 # 输出 %D6%D0%CE%C4
 print(chinese_str_url)
 
-dict1 = "find/url"
-dict1 = parse.urlencode(dict1)
-print(dict1)
+
+# with open("area.json",'r') as load_f:
+#     area_id = []
+#     load_dict = json.load(load_f)
+#     for each in load_dict:
+#         print(each)
+#         if 'cities' in each:
+#             for item in each['cities']:
+#               area_id.append({"areaId":item['areaId']})
+#         else:
+#             area_id.append({"areaId":each['areaId']})
+#
+#     print(json.dumps(area_id))
+
+
+depart_ment = ['儿科', '皮肤科', '妇产科', '口腔科','新生儿科']
+
+base_url = "https://www.guahao.com/json/white/search/eteams?q=&dept={dept}&page=1&cid={cid}&pid=2&_=1604828782843"
+
+
+# with open("area_id.json", 'r') as load_f:
+#     result_list = []
+#     load_dict = json.load(load_f)
+#     for each in load_dict:
+#         for item in depart_ment:
+#             result_list.append({"areaId":each['areaId'],"department":item})
+#
+# print(result_list)
+# base_url_list = []
+# for each in result_list:
+#     base_url_list.append(base_url.format(dept=each['department'], cid=each['areaId']))
+#
+# print(json.dumps(base_url_list))
+
+
+with open("start_url.json", 'r') as load_f:
+    load_dict = json.load(load_f)
+    print(load_dict)
+
+list = io.open(r"start_url.json", "r", encoding="gbk")
+print(list[0])
