@@ -13,4 +13,7 @@ result = selector.xpath('//*[@id="g-cfg"]/div[1]/div[2]/ul/li')
 
 list_obj = []
 for i in result:
-    print(i)
+    shanchan = i.xpath('./div[2]/div[1]/p/text()')[0].strip().replace("\r\n", "").replace(" ", "")
+
+    name = i.xpath('./div[1]/dl/dt/text()')
+    print(name)
