@@ -84,3 +84,22 @@ print(json.dumps(base_url_list))
 #
 # list = io.open(r"start_url.json", "r", encoding="gbk")
 # print(list[0])
+
+# 儿科   https://www.guahao.com/expert/61412/%E5%84%BF%E7%A7%91            9962
+# 妇产科 https://www.guahao.com/expert/61411/%E5%A6%87%E4%BA%A7%E7%A7%91   12135
+# 口腔科 https://www.guahao.com/expert/61416/%E5%8F%A3%E8%85%94%E7%A7%91   4164
+# 皮肤科 https://www.guahao.com/expert/61413/%E7%9A%AE%E8%82%A4%E7%A7%91   3353
+base_url = ["https://www.guahao.com/expert/61412/%E5%84%BF%E7%A7%91/p{page}",
+            "https://www.guahao.com/expert/61411/%E5%A6%87%E4%BA%A7%E7%A7%91/p{page}",
+            "https://www.guahao.com/expert/61416/%E5%8F%A3%E8%85%94%E7%A7%91/p{page}",
+            "https://www.guahao.com/expert/61413/%E7%9A%AE%E8%82%A4%E7%A7%91/p{page}"
+            ]
+
+start_url = []
+
+for i in range(1,39):
+    for item in base_url:
+        start_url.append(item.format(page=i))
+
+print(json.dumps(start_url))
+

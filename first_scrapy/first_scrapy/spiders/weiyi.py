@@ -18,7 +18,7 @@ class WeiyiSpider(scrapy.Spider):
     depart_ment = ['儿科', '皮肤科', '妇产科', '口腔科','新生儿科']
     start_urls = []
 
-    with open(r"F:\python-test\first_scrapy\first_scrapy\spiders\start_url.json", 'r') as load_f:
+    with open(r"D:\study\python-test\first_scrapy\first_scrapy\spiders\start_url.json", 'r') as load_f:
         load_dict = json.load(load_f)
         for link in load_dict:
             start_urls.append(link)

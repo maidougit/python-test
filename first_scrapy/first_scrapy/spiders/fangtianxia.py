@@ -70,7 +70,9 @@ class FangtianxiaSpider(scrapy.Spider):
         item['subarea'] = "".join(item['subarea'])  # 字符串切片，去掉后面2个字
         item['subarea'] = item['subarea'][:-2]
         item['area'] = response.xpath('//div[@class="s2"]/div/a/text()').extract()  # 当前城市
-        item['area'] = "".join(item['area']).replace(",", "")
+
+
+
 
         positioning = response.xpath("//div[@class='mapbox_dt']/iframe/@src").extract_first()  # 获取楼盘定位地址
         positioning = u"https:" + positioning
